@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import firebase from '../firebase-db';
 import { Form, Input, ErrorMessage } from 'components/forms/styles';
@@ -61,6 +62,7 @@ const Login = props => {
         {errors.password && <ErrorMessage>{errors.password}</ErrorMessage>}
         {firebaseError && <ErrorMessage>{firebaseError}</ErrorMessage>}
         <button type="submit">Login</button>
+        <Link to="/password-recovery">Forgot Password?</Link>
       </Form>
     </div>
   );
